@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="flightcheck">
+    <test name="flightcheck">
+         <groups>
+         <run>
+            <include name="flightcheck"  />
+            <exclude name="defekt" />
+            <exclude name="bug_in_anwendung" />
+         </run>
+         </groups>
+    <packages>
+     	<package name="de.clear.it.test.*"/>
+   	</packages>
+    </test>
+</suite>
+

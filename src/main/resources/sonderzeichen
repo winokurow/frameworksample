@@ -1,0 +1,9 @@
+Folgende Sonderzeichen sollen mit Unicode ersetzen werden:
+
+ü = \u00FC
+Ü = \u00DC
+ä = \u00E4
+Ä = \u00C4
+ö = \u00F6
+Ö = \u00D6
+ß = \u00DF
