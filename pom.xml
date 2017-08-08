@@ -10,7 +10,7 @@
 	<properties>
 		<typ>flightcheck</typ>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selenium.version>3.0.0</selenium.version>
+		<selenium.version>3.4.0</selenium.version>
 	</properties>
 
 
@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.0.1</version>
+			<version>${selenium.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>

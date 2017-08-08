@@ -16,6 +16,7 @@ import de.clearit.test.common.BasisLogger;
 import de.clearit.test.common.ScreenshotCreator;
 import de.clearit.test.common.TestUtils;
 import de.clearit.test.common.WebdriverUtils;
+import de.clearit.test.data.Browser;
 import de.clearit.test.framework.AllTestListenerAdapters;
 import de.clearit.test.framework.ExecutionTimer;
 import de.clearit.test.framework.ExecutionTimerManager;
@@ -175,7 +176,7 @@ public class AbstractTest extends TestHelper
       erzeugeNeuenDriver(url);
 
       // Manchmal hängt IE bei laden
-      if (WebdriverUtils.isIE())
+      if (WebdriverUtils.getTargetBrowser().equals(Browser.IE))
       {
          getWebDriver().get(url);
       }
@@ -208,7 +209,7 @@ public class AbstractTest extends TestHelper
       String grid = getProperty("seleniumgrid.url");
       String gridHint = getProperty("seleniumgrid.hint", "VDI");
 
-      driver = WebDriverManager.createDriver(grid, gridHint, WebdriverUtils.isIE(), url);
+      driver = WebDriverManager.createDriver(grid, gridHint, WebdriverUtils.getTargetBrowser(), url);
       driversBeingUsedInTest.add(driver);
    }
 

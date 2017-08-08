@@ -31,7 +31,7 @@ public class SampleTest extends AbstractTest
       mainPage.gotoClearIT();
       ClearITPage clearITPage = new ClearITPage(getWebDriver(), null, "");
       String info = clearITPage.doGetInfo();
-      Assert.assertTrue(info.contains("Die Unternehmensgruppe steht für ausgeprägte"), "Info ist falsch");
+      Assert.assertTrue(info.contains("Wie alle Unternehmen der CLEAR-GROUP steht die CLEAR IT"), "Info ist falsch");
    }
 
    /**
