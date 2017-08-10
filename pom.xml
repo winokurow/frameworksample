@@ -15,10 +15,14 @@
 
 
 	<dependencies>
-
 		<dependency>
 			<groupId>de.clearit</groupId>
-			<artifactId>clearSeleniumFramework</artifactId>
+			<artifactId>clearTest</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>de.clearit</groupId>
+			<artifactId>clearWebTest</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -35,6 +39,11 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.12</version>
+		</dependency>
+		<dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>5.0.0-BETA6</version>
 		</dependency>
 	</dependencies>
 	<build>

@@ -8,11 +8,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import de.clear.it.test.abstrakt.AbstractTest;
+import de.clear.it.test.data.Group;
 import de.clear.it.test.pages.ClearITPage;
 import de.clear.it.test.pages.MainPage;
-import de.clearit.test.framework.Group;
 
-public class SampleTest extends AbstractTest
+public class SampleWebTest extends AbstractTest
 {
 
    /**

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import de.clearit.test.framework.Check;
-import de.clearit.test.framework.elemente.GuiElement;
+import de.clearit.test.framework.elemente.WebBaseElement;
 import de.clearit.test.pages.LoggedInPage;
 
 /**
@@ -18,11 +18,11 @@ public class MainPage  extends LoggedInPage {
 	
 	 /* Link "Clear-IT" */
 	   @Check
-	   protected GuiElement clearITLink = new GuiElement(By.id("site-it"));
+	   protected WebBaseElement clearITLink = new WebBaseElement(By.id("site-it"));
 
 	   /* Der Button "Weitere Stellenangebote" */
 	   @Check
-	   protected GuiElement weitereStellenangeboteButton = new GuiElement(By.cssSelector("a[class='joblist']"));
+	   protected WebBaseElement weitereStellenangeboteButton = new WebBaseElement(By.cssSelector("a[class='joblist']"));
 
 	   /**
 	    * Constructor.

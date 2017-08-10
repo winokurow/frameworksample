@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import de.clearit.test.framework.Check;
-import de.clearit.test.framework.elemente.GuiElement;
+import de.clearit.test.framework.elemente.WebBaseElement;
 import de.clearit.test.pages.LoggedInPage;
 
 /**
@@ -17,7 +17,7 @@ public class ClearITPage  extends LoggedInPage {
 	
 	 /* Link "Clear-IT" */
 	   @Check
-	   protected GuiElement infoText = new GuiElement(By.id("info"));
+	   protected WebBaseElement infoText = new WebBaseElement(By.id("info"));
 
 	   /**
 	    * Constructor.

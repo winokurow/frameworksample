@@ -15,17 +15,15 @@ import org.testng.annotations.Test;
 import de.clearit.test.common.BasisLogger;
 import de.clearit.test.common.ScreenshotCreator;
 import de.clearit.test.common.TestUtils;
-import de.clearit.test.common.WebdriverUtils;
 import de.clearit.test.data.Browser;
 import de.clearit.test.framework.AllTestListenerAdapters;
 import de.clearit.test.framework.ExecutionTimer;
 import de.clearit.test.framework.ExecutionTimerManager;
-import de.clearit.test.framework.PropertyManager;
-import de.clearit.test.framework.WebDriverCleanUp;
-import de.clearit.test.framework.WebDriverHolder;
+import de.clearit.test.framework.WebPropertyManager;
 import de.clearit.test.framework.webdriver.WebDriverManager;
 import de.clearit.test.framework.webdriver.WebDriverWrapper;
-import de.clearit.test.helper.TestHelper;
+import de.clearit.test.helper.WebTestHelper;
+import de.clearit.test.helper.web.WebdriverUtils;
 
 /**
  * AbstractTest.
@@ -36,14 +34,11 @@ import de.clearit.test.helper.TestHelper;
  * @author Ilja Winokurow
  */
 @Listeners(AllTestListenerAdapters.class)
-public class AbstractTest extends TestHelper
+public class AbstractTest extends WebTestHelper
 {
 
    /* Logger */
    protected final static Logger basisLogger = BasisLogger.LOGGER;
-
-   /* Logger */
-   protected final static Logger logger = Logger.getLogger("Test");
 
    /** Execution Timer. */
    ExecutionTimer executionTimer = null;
@@ -55,7 +50,7 @@ public class AbstractTest extends TestHelper
    protected ArrayList<WebDriverWrapper> driversBeingUsedInTest = null;
 
    /** Die Eigenschaften des Tests. */
-   protected PropertyManager properties;
+   protected WebPropertyManager properties;
 
    /** Test gestartet */
    protected Boolean testStartet = null;
@@ -81,7 +76,7 @@ public class AbstractTest extends TestHelper
    public void beforeTest(Method method)
    {
       driversBeingUsedInTest = new ArrayList<>();
-      properties = PropertyManager.getInstance();
+      properties = WebPropertyManager.getInstance();
 
       final StringBuilder logMessage = new StringBuilder("Starte Testfall '")
             .append(method.getDeclaringClass().getSimpleName()).append(".").append(method.getName()).append("'");
@@ -242,11 +237,11 @@ public class AbstractTest extends TestHelper
     *
     * @return Properties Objekt
     */
-   private PropertyManager getProperties()
+   private WebPropertyManager getProperties()
    {
       if (properties == null)
       {
-         properties = PropertyManager.getInstance();
+         properties = WebPropertyManager.getInstance();
       }
       return properties;
    }
