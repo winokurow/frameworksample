@@ -7,12 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import de.clear.it.test.abstrakt.AbstractTest;
+import de.clear.it.test.abstrakt.AbstractWebTest;
 import de.clear.it.test.data.Group;
 import de.clear.it.test.pages.ClearITPage;
 import de.clear.it.test.pages.MainPage;
 
-public class SampleWebTest extends AbstractTest
+public class SampleWebTest extends AbstractWebTest
 {
 
    /**
